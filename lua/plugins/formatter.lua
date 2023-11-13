@@ -19,7 +19,7 @@ local cmd = {
   {
     exe = "clang-format",
     args = {
-      "--style='{BasedOnStyle: llvm, IndentWidth: 2}'",
+      "--style='{BasedOnStyle: llvm, IndentWidth: 2, ColumnLimit: 120}'",
       "--",
       "-",
     },
