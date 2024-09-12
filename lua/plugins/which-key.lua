@@ -8,33 +8,33 @@ end
 which_key.setup({
   icons = {
     group = "",
+    rules = false,
   },
-  window = {
+  win = {
+    title = false,
     border = "single",
   },
   layout = {
     spacing = 15,
     align = "center",
   },
+  show_help = false,
+  show_keys = false,
 })
 
-which_key.register({
-  ["c"] = { "<CMD>close<CR>", "Close window" },
-  ["e"] = { "<CMD>NvimTreeToggle<CR>", "Explorer" },
-  ["l"] = { "<CMD>LspInfo<CR>", "Lsp info" },
-  ["m"] = { "<CMD>Mason<CR>", "Mason" },
-  ["q"] = { "<CMD>q<CR>", "Quit" },
-  ["Q"] = { "<CMD>q!<CR>", "Quit force" },
-  ["t"] = { "<CMD>ToggleTerm<CR>i", "Terminal" },
-  ["w"] = { "<CMD>write<CR>", "Write" },
-  ["x"] = { "<CMD>bd<CR>", "Close buffer" },
-  ["d"] = { vim.diagnostic.setloclist, "Diagnostic" },
-  p = {
-    name = "Packer",
-    c = { "<CMD>PackerClean<CR>", "Clean" },
-    i = { "<CMD>PackerInstall<CR>", "Install" },
-    s = { "<CMD>PackerSync<CR>", "Sync" },
-  },
-}, {
-  prefix = "<leader>",
+which_key.add({
+  { "<leader>Q", "<CMD>q!<CR>", desc = "Quit force" },
+  { "<leader>c", "<CMD>close<CR>", desc = "Close window" },
+  { "<leader>d", vim.diagnostic.setloclist, desc = "Diagnostic" },
+  { "<leader>e", "<CMD>NvimTreeToggle<CR>", desc = "Explorer" },
+  { "<leader>l", "<CMD>LspInfo<CR>", desc = "Lsp info" },
+  { "<leader>m", "<CMD>Mason<CR>", desc = "Mason" },
+  { "<leader>p", group = "Packer" },
+  { "<leader>pc", "<CMD>PackerClean<CR>", desc = "Clean" },
+  { "<leader>pi", "<CMD>PackerInstall<CR>", desc = "Install" },
+  { "<leader>ps", "<CMD>PackerSync<CR>", desc = "Sync" },
+  { "<leader>q", "<CMD>q<CR>", desc = "Quit" },
+  { "<leader>t", "<CMD>ToggleTerm<CR>i", desc = "Terminal" },
+  { "<leader>w", "<CMD>write<CR>", desc = "Write" },
+  { "<leader>x", "<CMD>bd<CR>", desc = "Close buffer" },
 })
