@@ -15,11 +15,11 @@ return {
         show_keys = false,
     },
     keys = {
+        { "<leader>a", "<CMD>Mason<CR>", desc = "Mason" },
         { "<leader>e", "<CMD>NvimTreeToggle<CR>", desc = "Explorer" },
         { "<leader>f", require("conform").format({ lsp_format = "fallback" }), desc = "Format" },
-        { "<leader>l", "<CMD>Mason<CR>", desc = "Lsp Manager" },
         { "<leader>m", "<CMD>MarkdownPreviewToggle<CR>", desc = "MarkdownPreview" },
-        { "<leader>p", "<CMD>Lazy<CR>", desc = "Plugins" },
+        { "<leader>l", "<CMD>Lazy<CR>", desc = "Lazy" },
         { "<leader>q", "<CMD>q<CR>", desc = "Quit" },
         { "<leader>Q", "<CMD>q!<CR>", desc = "Quit force" },
         { "<leader>t", "<CMD>ToggleTerm<CR>", desc = "Terminal" },
